@@ -8,13 +8,15 @@
  */
 int main(void)
 {
-int i;
-char c;
-for( i = 97; i < 123; i++)
+int i, new_line;
+char c, char_line;
+for (i = 97; i < 123; i++)
 {
 c = (char)i;
 putchar(c);
-putchar('\0');
 }
+new_line = 10;
+char_line = (char)new_line;
+putchar(char_line);
 return (0);
 }
