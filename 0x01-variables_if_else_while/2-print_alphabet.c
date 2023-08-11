@@ -10,10 +10,11 @@ int main(void)
 {
 int i;
 char c;
-for(i = 97; i < 123; i++)
+for( i = 97; i < 123; i++)
 {
 c = (char)i;
 putchar(c);
+putchar("\n");
 }
 return (0);
 }
