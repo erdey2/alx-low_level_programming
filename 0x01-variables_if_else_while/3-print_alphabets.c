@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-int i, new_line, int_dollar;
-char c, char_line, char_dollar;
+int i, new_line;
+char c, char_line;
 for (i = 97; i < 123; i++)
 {
 c = (char)i;
@@ -20,9 +20,6 @@ for (i = 65; i < 91; i++)
 c = (char)i;
 putchar(c);
 }
-int_dollar = 36;
-char_dollar = (char)int_dollar;
-putchar(char_dollar);
 new_line = 10;
 char_line = (char)new_line;
 putchar(char_line);
