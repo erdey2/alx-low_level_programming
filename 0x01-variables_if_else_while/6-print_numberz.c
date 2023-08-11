@@ -9,13 +9,10 @@
 int main(void)
 {
 int i;
-char end_char, int_char;
 for (i = 48; i < 58; i++)
 {
-int_char = (char)i;
-putchar(int_char);
+putchar(i);
 }
-end_char = '\n';
-putchar(end_char);
+putchar(10);
 return (0);
 }
