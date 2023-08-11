@@ -14,7 +14,7 @@ for( i = 97; i < 123; i++)
 {
 c = (char)i;
 putchar(c);
-putchar("\n");
+putchar('\0');
 }
 return (0);
 }
