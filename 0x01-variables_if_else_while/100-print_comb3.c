@@ -21,7 +21,7 @@ if (!(row == 56 && col == 57))
 putchar(',');
 putchar(' ');
 }
-} 
+}
 }
 }
 putchar('\n');
