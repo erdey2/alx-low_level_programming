@@ -17,8 +17,10 @@ if (!(row == col) && col > row)
 putchar(row);
 putchar(col);
 if (!(row == 56 && col == 57))
+{
 putchar(',');
 putchar(' ');
+}
 } 
 }
 }
