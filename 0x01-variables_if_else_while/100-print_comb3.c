@@ -18,9 +18,9 @@ putchar(row);
 putchar(col);
 if (!(row == 56 && col == 57))
 putchar(',');
+putchar(' ');
 } 
 }
-
 }
 putchar('\n');
 return (0);
