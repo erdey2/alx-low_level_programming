@@ -19,6 +19,7 @@ if (j < 57)
 {
 putchar(i);
 putchar(j);
+putchar(' ');
 putchar(k);
 putchar(m);
 if (!(i == 57 && j == 56 && k == 57 && m == 57))
