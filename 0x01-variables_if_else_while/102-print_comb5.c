@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-* main - entry point
-*
-* Return: always 0 (Success)
-*/
+ * main - entry point
+ *
+ * Return: always 0 (Success)
+ */
 int main(void)
 {
 int i, j, k, m;
@@ -13,9 +13,9 @@ for (j = 48; j <= 57; ++j)
 {
 for (k = 48; k <= 57; ++k)
 {
-for (m = 48; m <= 57; ++m)
+for (m = 48; m<= 57; ++m)
 {
-if (m > 48 && j < 57)
+if (j < 57)
 {
 putchar(i);
 putchar(j);
