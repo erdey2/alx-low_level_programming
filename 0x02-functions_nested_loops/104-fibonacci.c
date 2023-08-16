@@ -22,15 +22,15 @@ int main(void)
 		before = after - before;
 	}
 
-	before1 = (before / |);
-	before2 = (before % |);
-	after1 = (after / |);
-	after2 = (after % |);
+	before1 = (before / last);
+	before2 = (before % last);
+	after1 = (after / last);
+	after2 = (after % last);
 
 	for (i = 92; i < 99; i++)
 	{
-		printf(", %lu", after1 + (after2 / |));
-		printf("%lu", after2 % |);
+		printf(", %lu", after1 + (after2 / last));
+		printf("%lu", after2 % last);
 		after1 = after1 + before1;
 		before1 = after1 - before1;
 		after2 = after2 + before2;
