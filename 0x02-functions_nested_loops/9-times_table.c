@@ -1,37 +1,35 @@
 #include "main.h"
 /**
- * times_table - Display 9 by 9 multiplication table
- * Return: void
- */
+* times_table - Display 9 by 9 multiplication table
+* Return: void
+*/
 void times_table(void)
 {
-	int i, j, k, m, n;
+	int i, j, k;
 
-	for (i = 48; i <= 57; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 48; j <= 57; j++)
+		for (j = 0; j < 10; j++)
 		{
 			k = i * j;
-			if (k > 9)
+			if (j == 0)
 			{
-				m = k % 10;
-				n = (k - m) / 10;
-				_putchar(44);
-				_putchar(32);
-				_putchar(n + '0');
-				_putchar(m + '0');
-			}
-			else
-			{
-				if (j != 0)
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-				}
 				_putchar(k + '0');
 			}
-				
+			if (k < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			       	_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10)
+			{
+                                _putchar(',');
+                                _putchar(' ');
+                                _putchar((k / 10) + '0');
+                                _putchar((k % 10) + '0');
+			}
 		}
 		_putchar('\n');
 	}
