@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_times_table - Display a given no of multiplication table
-* @c: the size of the multiplication table
+* @n: the size of the multiplication table
 * Return: void
 */
 void print_times_table(int n)
@@ -29,6 +29,7 @@ void print_times_table(int n)
 				else if (k >= 10 && k <= 99)
 				{
 					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar((k / 10) + '0');
 					_putchar((k % 10) + '0');
