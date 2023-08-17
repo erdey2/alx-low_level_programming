@@ -5,7 +5,7 @@
  */
 void print_most_numbers()
 {
-	let count;
+	int count;
 	
 	for (count = 48; count <= 57; count++)
 	{
