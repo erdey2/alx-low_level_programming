@@ -11,6 +11,6 @@ void print_most_numbers(void)
 	{
 		if (count != 50 && count != 52)
 			_putchar(count);
-	_putchar('\n');
 	}
+	_putchar('\n');
 }
