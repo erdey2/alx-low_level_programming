@@ -5,7 +5,7 @@
  */
 void print_numbers(void)
 {
-	let count;
+	int count;
 
 	for (count = 48; count <= 57; count++)
 		_putchar(count);
