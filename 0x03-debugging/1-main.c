@@ -13,9 +13,9 @@ int main(void)
 
 	i = 0;
 
-	while (i < 10) /* i is 0 always it does not updated */
+	while (i < 10)
 	{
-		putchar(i);
+		putchar(i); /* is 0 always */
 	}
 
 	printf("Infinite loop avoided! \\o/\n");
