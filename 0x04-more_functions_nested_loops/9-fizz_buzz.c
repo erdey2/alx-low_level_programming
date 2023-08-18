@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int count;
+	short count;
 
 	for (count = 1; count <= 100; count++)
 	{
