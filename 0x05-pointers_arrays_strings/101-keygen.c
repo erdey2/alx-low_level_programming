@@ -18,10 +18,9 @@ char random_char(int index)
  */
 int main(void) 
 {
-	srand(time(NULL));
-	char str[]= "";
+	char str[14];
 	int i, index;
-
+	srand(time(NULL));
 	for (i = 0; i < 14; i++) 
 	{
 		index = rand() % 69;
