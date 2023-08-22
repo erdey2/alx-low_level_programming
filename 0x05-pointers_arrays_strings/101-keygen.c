@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define STRLEN 14
 /**
  * random_char - generates a random password
  * @index: the index of the string
@@ -20,10 +19,10 @@ char random_char(int index)
 int main(void) 
 {
 	srand(time(NULL));
-	char str[STRLEN];
+	char str[14];
 	int i, index;
 
-	for (i = 0; i <= STRLEN - 1; i++) 
+	for (i = 0; i < 14; i++) 
 	{
 		index = rand() % 69;
 		str[i] = random_char(index);
