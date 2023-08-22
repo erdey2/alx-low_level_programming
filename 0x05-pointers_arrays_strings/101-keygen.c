@@ -2,31 +2,46 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * random_char - generates a random password
- * @index: the index of the string
- * Return: a random password
- */
-char random_char(int index) 
-{
-	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_+@%!- ";
-	return charset[index];
-}
-/**
  * main - entry point
  *
- * Reurn: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-int main(void) 
+int main(void)
 {
-	char str[14];
-	int i, index;
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
+
 	srand(time(NULL));
-	for (i = 0; i < 14; i++) 
+	while (sum < 2772)
 	{
-		index = rand() % 69;
-		str[i] = random_char(index);
+		password[index] = 33 + rand() % 94;
+		sum += password[index];
 	}
-	str[i] = '\0';
-	printf("%s\n", str);
-	exit(0);
+	password[index] = '\0';
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+	printf("%s", password);
+	return (0);
 }
+
