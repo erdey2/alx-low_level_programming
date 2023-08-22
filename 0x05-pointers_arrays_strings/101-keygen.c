@@ -19,7 +19,7 @@ char random_char(int index)
 int main(void) 
 {
 	srand(time(NULL));
-	char str[14];
+	char str[]= "";
 	int i, index;
 
 	for (i = 0; i < 14; i++) 
