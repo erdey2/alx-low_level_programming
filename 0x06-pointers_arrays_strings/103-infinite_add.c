@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *infinite_add - adds large numbers using buffer(a temporary area in main memory)
+ * *infinite_add - adds numbers using buffer(a temporary area in main memory)
  * @n1: the first number
  * @n2: the second number
  * @r: the buffer
