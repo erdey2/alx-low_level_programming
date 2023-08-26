@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_number - prints a large number
+* print_number - prints large numbers
 * @n: the number to be drawn
 * Return: void
 */
