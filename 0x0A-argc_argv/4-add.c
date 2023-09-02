@@ -25,10 +25,17 @@ int main(int argc, char *argv[])
 				numbers[n] = atoi(argv[n]);
 				result += numbers[n];
 			}
-			else
+			else if (atoi(argv[n]) == 0)		
 			{
-				printf("Error\n");
-				return (1);
+				if (!(*argv[n] >= 48 || *argv[n] <= 57))
+				{
+					printf("0\n");
+				}
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 		}
 		printf("%d\n", result);
