@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 				numbers[n] = atoi(argv[n]);
 				result += numbers[n];
 			}
-			else if (atoi(argv[n]) == 0)		
+			else if (atoi(argv[n]) == 0)
 			{
 				if (!(*argv[n] >= 48 || *argv[n] <= 57))
 				{
