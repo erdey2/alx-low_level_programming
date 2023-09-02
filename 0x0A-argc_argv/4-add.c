@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int result = 0, n, numbers[100];
+	int result = 0, n, numbers[10];
 
 	if (argc < 2)
 	{
