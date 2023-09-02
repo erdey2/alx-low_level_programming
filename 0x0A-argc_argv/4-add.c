@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 				numbers[n] = atoi(argv[n]);
 				result += numbers[n];
 			}
-	
 			else if (atoi(argv[n]) == 0)
 			{
 				printf("Error\n");
