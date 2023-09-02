@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
  * main - entry point
@@ -17,13 +16,16 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	else if (argc >= 2)
+	else if (argc >= 3)
 	{
 		for (n = 1; n < argc; n++)
 		{
-			numbers[n] = atoi(argv[n]);
-			result += numbers[n];
-			if (!(numbers[n] >= 48) && (numbers[n] <= 57))
+			if (atoi(argv[n]) > 0)
+			{
+				numbers[n] = atoi(argv[n]);
+				result += numbers[n];
+			}
+			else
 			{
 				printf("Error\n");
 				return (1);
