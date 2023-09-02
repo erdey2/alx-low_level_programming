@@ -10,12 +10,11 @@
 
 int main(int argc, char *argv[])
 {
-	int result = 0, n, numbers[10];
+	int result = 0, n, numbers[100];
 
 	if (argc < 2)
 	{
 		printf("0\n");
-		return (0);
 	}
 	else if (argc >= 3)
 	{
@@ -28,8 +27,15 @@ int main(int argc, char *argv[])
 			}
 			else if (atoi(argv[n]) == 0)
 			{
-				printf("Error\n");
-				return (1);
+				if (!(*argv[n] >= 48 || *argv[n] <= 57))
+				{
+					printf("0\n");
+				}
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 		}
 		printf("%d\n", result);
