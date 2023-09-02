@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int result = 0, n, numbers[100];
 
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("0\n");
 	}
@@ -25,17 +25,11 @@ int main(int argc, char *argv[])
 				numbers[n] = atoi(argv[n]);
 				result += numbers[n];
 			}
+	
 			else if (atoi(argv[n]) == 0)
 			{
-				if (!(*argv[n] >= 48 || *argv[n] <= 57))
-				{
-					printf("0\n");
-				}
-				else
-				{
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
 		}
 		printf("%d\n", result);
