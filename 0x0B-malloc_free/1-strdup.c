@@ -19,24 +19,17 @@ char *_strdup(char *str)
 	p = malloc((count * sizeof(char)) + 1);
 	q = p;
 
-	if (p != NULL)
+	if (str != NULL)
 	{
-		if (str == NULL)
+		for (n = 0; n < count; n++)
 		{
-			printf("failed to allocate memory\n");
+			*(q + n) = *(str + n);
 		}
-		else
-		{
-			for (n = 0; n < count; n++)
-			{
-				*(q + n) = *(str + n);
-			}
-			*(q + count) = '\0';
-		}
+		*(q + count) = '\0';
 	}
 	else
 	{
-		printf("failed to allocate memory\n");
+		return (NULL);
 	}
 	return (p);
 }
