@@ -19,17 +19,24 @@ char *_strdup(char *str)
 	p = malloc((count * sizeof(char)) + 1);
 	q = p;
 
-	if (str != NULL)
+	if (p == NULL)
 	{
-		for (n = 0; n < count; n++)
-		{
-			*(q + n) = *(str + n);
-		}
-		*(q + count) = '\0';
+		return (NULL);
 	}
 	else
 	{
-		return (NULL);
+		if (str != NULL)
+		{
+			for (n = 0; n < count; n++)
+			{
+				*(q + n) = *(str + n);
+			}
+			*(q + count) = '\0';
+		}
+		else
+		{
+			return (NULL);
+		}
 	}
 	return (p);
 }
