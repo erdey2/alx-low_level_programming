@@ -13,18 +13,20 @@ char *create_array(unsigned int size, char c)
 
 	p = malloc(size * sizeof(char));
 	q = p;
-
-	if (size == 0)
-	{
-		p = NULL;
-		return ('\0');
-
-	}
-	else
-	{
-		for (n = 0; n < size; n++)
+	
+	if (p != NULL)
+	{	
+		if (size == 0)
 		{
-			*(q + n) = c;
+			p = NULL;
+			return ('\0');
+		}
+		else
+		{
+			for (n = 0; n < size; n++)
+			{
+				*(q + n) = c;
+			}
 		}
 	}
 	return (p);
