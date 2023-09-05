@@ -8,38 +8,36 @@
  * Return: the address of a newly created 2-d array
  */
 
-
 int **alloc_grid(int width, int height)
 {
-    int **p;
-    int i, j;
+	int **p;
+	int i, j;
+	int size = width * height;
 
-    if (width <= 0 || height <= 0)
-    {
-        return NULL;
-    }
+	if (size <= 0)
+	{
+		return (NULL);
+	}
+	p = malloc(width * sizeof(int *));
 
-    p = malloc(width * sizeof(int *));
-    if (p == NULL)
-    {
-        return NULL;
-    }
+	if (p == NULL)
+		return (NULL);
 
-    for (i = 0; i < width; i++)
-    {
-        p[i] = malloc(height * sizeof(int));
-        if (p[i] == NULL)
-        {
-            return NULL;
-        }
-    }
-
-    for (i = 0; i < width; i++)
-    {
-        for (j = 0; j < height; j++)
-		p[i][j] = 0;
-	free(p[i]);
-    }
-    free(p);
-    return p;
+	for (i = 0; i < width; i++)
+	{
+		p[i] = malloc(height * sizeof(int));
+		if (p[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(p[i]);
+			free(p);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < width; i++)
+	{
+		for (j = 0; j < height; j++)
+			p[i][j] = 0;
+	}
+	return (p);
 }
