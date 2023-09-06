@@ -97,4 +97,3 @@ void create_word(char **words, char *str, int start, int end, int index)
 		words[index][j] = str[start];
 	words[index][j] = '\0';
 }
-}
