@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings 
- * @s1: the first string
- * @s2: the 2nd string
+ * string_nconcat - concatenates two strings
+ * * @s1: the first string
+ * * @s2: the 2nd string
  * @n: the number of chars to be copied
  * Return: the address of the concatenated string
  */
