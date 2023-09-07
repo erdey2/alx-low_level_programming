@@ -10,21 +10,22 @@
 
 int  *array_range(int min, int max)
 {
-        int *p, i, count = 0;
+	int *p, i, count = 0;
 
-        if (min > max)
-        {
-                return (NULL);
-        }
-        for (i = min; i <= max; i++)
-                count++;
-        p = calloc(count, sizeof(int));
-        if (p == NULL)
-        {
-                return (NULL);
+	if (min > max)
+	{
+		return (NULL);
+	}
+	for (i = min; i <= max; i++)
+		count++;
 
-        }
-        for (i = min; i <= max; i++)
-                p[i] = min++;
-        return (p);
+	p = calloc(count, sizeof(int));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	for (i = min; i <= max; i++)
+		p[i] = min++;
+
+	return (p);
 }
