@@ -5,7 +5,7 @@
  * print_name - welcome by name
  * @name: the name of a person
  * @f: function
- * * Return: void
+ * *Return: void
  *
  */
 
