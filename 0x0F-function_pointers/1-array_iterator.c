@@ -3,8 +3,9 @@
 
 /**
  * array_iterator - Display array elements
+ * @array: the array
  * @size: the name of a person
- * @action: function 
+ * @action: function
  * Return: void
  */
 
