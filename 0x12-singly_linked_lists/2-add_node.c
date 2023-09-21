@@ -5,15 +5,20 @@
 
 /**
  * add_node - Add a new node at start
- * @h: the address of the node to be printed
- *
- * Return: the size_t
+ * @head: the address of the first node
+ * @str: the string to to be added
+ * Return: the address of the memory location
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *p = malloc(sizeof(list_t));
-	if (p != NULL)
+
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	else
 	{
 		p->str = strdup(str);
 		p->next = *head;
