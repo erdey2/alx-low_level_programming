@@ -8,7 +8,7 @@
  * @len: the size of the str
  * @next: pointer to next node
  *
- * Description: single linked list
+ * Description: single linked list node structure
  */
 
 typedef struct list_s
