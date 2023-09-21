@@ -4,6 +4,26 @@
 #include <string.h>
 
 /**
+ * _strlen - determine the length of a string
+ * @s: the string
+ *
+ * Return: the length (int)
+ */
+
+int _strlen(const char *s)
+{
+	int size = 0;
+
+	while (*s)
+	{
+		size++;
+		s++;
+	}
+
+	return (size);
+}
+
+/**
  * add_node - Add a new node at start
  * @head: the address of the first node
  * @str: the string to to be added
@@ -21,6 +41,7 @@ list_t *add_node(list_t **head, const char *str)
 	else
 	{
 		p->str = strdup(str);
+		p->len = _strlen(str);
 		p->next = *head;
 		*head = p;
 
