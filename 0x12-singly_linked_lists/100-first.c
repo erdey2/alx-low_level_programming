@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * execute_before_main - this will execute before main it 
- */
+ * execute_before_main - this will execute before main does
+*/
+void execute_before_main(void) __attribute__ ((constructor));
 
-void execute_before_main() __attribute__((constructor));
 /**
  * execute_before_main - actual implementation
  */
