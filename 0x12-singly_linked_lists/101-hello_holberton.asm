@@ -12,7 +12,7 @@ main:					; the label for the entry point
 
 		mov	rdi,fmt         ; move from the register
 		mov	rsi,msg
-		mov	xor,0		; or can be rax,rax
+		mov	rax,0		; or can be xor rax,rax
 	        call    printf		; Call the printf function
 
 		pop	rbp		; restore stack
