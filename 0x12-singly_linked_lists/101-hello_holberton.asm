@@ -1,19 +1,19 @@
-extern	printf		; the C function, to be called
+extern	printf		; the function to be called
 
-	        section .data		; Data section, initialized variables
-msg:		db "Hello, Holberton", 0 ; C string needs 0
-fmt:	    	db "%s", 10, 0          ; The printf format, "\n",'0'
+	        section .data		; this is Data section, it can have also initialized variables
+msg:		db "Hello, Holberton", 0 ; The string to be printed
+fmt:	    	db "%s", 10, 0          ; The format, "\n",'0'
 
-	        section .text		; Code section.
+	        section .text		; this is the Code part.
 
-	        global main		; the standard gcc entry point
-main:					; the program label for the entry point
-	        push    rbp		; set up stack frame, must be alligned
+	        global main		; execution starts here
+main:					; the label for the entry point
+	        push    rbp		; 
 
-		mov	rdi,fmt
+		mov	rdi,fmt         ; move from the register
 		mov	rsi,msg
-		mov	rax,0		; or can be  xor  rax,rax
-	        call    printf		; Call C function
+		mov	xor,0		; 
+	        call    printf		; Call the printf function
 
 		pop	rbp		; restore stack
 
