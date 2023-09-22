@@ -8,11 +8,11 @@ fmt:	    	db "%s", 10, 0          ; The format, "\n",'0'
 
 	        global main		; execution starts here
 main:					; the label for the entry point
-	        push    rbp		; 
+	        push    rbp		; stack frame set
 
 		mov	rdi,fmt         ; move from the register
 		mov	rsi,msg
-		mov	xor,0		; 
+		mov	xor,0		; or can be rax,rax
 	        call    printf		; Call the printf function
 
 		pop	rbp		; restore stack
