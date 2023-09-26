@@ -5,7 +5,7 @@
  * @head: the address of the node
  * @n: the data element be be inserted
  *
- *Retrurn: the address of the added node
+ *Return: the address of the added node
  */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
@@ -17,12 +17,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		q = malloc(sizeof(listint_t));
 		if (q == NULL)
 			return (NULL);
-		else
-		{
-			q->n = n;
-			q->next = NULL;
-			*head = q;
-		}
+		q->n = n;
+		q->next = NULL;
+		*head = q;
 	}
 	else
 	{
