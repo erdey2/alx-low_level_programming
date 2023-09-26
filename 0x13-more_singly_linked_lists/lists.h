@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct listint_s - single linked list definition
+ * @n: the data part (integer)
+ * @next: the pointer to next node
+ * Description: A single linked list man
+ */
 typedef struct listint_s
 {
 	int n;
@@ -21,4 +27,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
+listint_t *reverse_listint(listint_t **head);
 #endif
