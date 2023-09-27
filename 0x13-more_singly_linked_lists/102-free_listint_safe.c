@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * new_list - creates a new memory for double pointers
+ * new_listt - creates a new memory for double pointers
  * @list: the old list to append
  * @size: the size of the new list
  * @temp: the new temporary node
