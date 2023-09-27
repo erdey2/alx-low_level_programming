@@ -8,7 +8,9 @@
  *
  * Return: an address of the temporary pointer
  */
-const listint_t **new_list(const listint_t **list, size_t size, const listint_t *temp)
+
+const listint_t **new_list(const listint_t **list,
+		size_t size, const listint_t *temp)
 {
 	const listint_t **list_n;
 	size_t count;
