@@ -9,10 +9,9 @@
  * Return: an address of the temporary pointer
  */
 
-const listint_t **new_list(const listint_t **list,
-		size_t size, const listint_t *temp)
+listint_t **new_list(listint_t **list, size_t size, listint_t *temp)
 {
-	const listint_t **list_n;
+	listint_t **list_n;
 	size_t count;
 
 	list_n = malloc(size * sizeof(listint_t *));
@@ -55,7 +54,7 @@ size_t free_listint_safe(listint_t **head)
 			}
 		}
 		size++;
-		list = new_list(list, num, *head);
+		list = new_list(list, size, *head);
 		next = (*head)->next;
 		free(*head);
 		*head = next;
