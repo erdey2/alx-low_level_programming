@@ -9,9 +9,10 @@
  */
 unsigned long int find_power(unsigned int base, unsigned int pow)
 {
-	unsigned long int num = 1;
+	unsigned long int num;
 	unsigned int i = 0;
-	
+
+	num = 1;
 	while (i <= pow)
 	{
 		num = num * base;
@@ -29,26 +30,25 @@ unsigned long int find_power(unsigned int base, unsigned int pow)
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int num, result;
+	unsigned long int new, result;
 	char symbol;
 
 	symbol = 0;
-	num = find_power(2, sizeof(unsigned long int) * 8 - 1);
+	new = find_power(2, sizeof(unsigned long int) * 8 - 1);
 
-	while (num != 0)
+	while (new != 0)
 	{
-		result = n & num;
-		if (result == num)
+		result = n & new;
+		if (result == new)
 		{
 			symbol = 1;
 			_putchar('1');
 
 		}
-		else if (symbol == 1 || num == 1)
+		else if (symbol == 1 || new == 1)
 		{
 			_putchar('0');
 		}
-		num >>= 1;
+		new >>= 1;
 	}
-
 }
