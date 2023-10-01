@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * print_binary - prints a binary equivalent
@@ -17,7 +16,7 @@ void print_binary(unsigned long int n)
 	while (i >= 0)
 	{
 		num = n >> i;
-		
+
 		if (num & 1)
 		{
 			_putchar('1');
