@@ -6,6 +6,7 @@
  *
  *Return: the size
  */
+
 int _strlen(char *str)
 {
 	int len = 0;
@@ -21,7 +22,7 @@ int _strlen(char *str)
 /**
  * append_text_to_file - add new text at end
  * @filename: - the name of the file
- * @text_content - the new content to be added
+ * @text_content: - the new content to be added
  *
  * Return: 1 0n success -1 on failure
  */
