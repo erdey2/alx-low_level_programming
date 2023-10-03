@@ -9,7 +9,7 @@
  * Return: 0
  */
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int in_fd, out_fd;
 	int num1 = BUFSIZE, num2 = 0;
@@ -45,6 +45,6 @@ int main (int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", in_fd), exit(100);
 	if (close(out_fd) < 0)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", out_fd), exit(100);
-	
+
 	return (0);
 }
