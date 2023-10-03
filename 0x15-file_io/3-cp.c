@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 	int in_fd, out_fd;
 	int num1 = BUFSIZE, num2 = 0;
 	char buf[BUFSIZE];
+	mode_t file_perm;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp in_fd out_fd\n"), exit(97);
@@ -23,7 +24,8 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	out_fd = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	out_fd = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, file_perm);
 	if (out_fd < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
