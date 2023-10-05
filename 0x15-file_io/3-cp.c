@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
 	input_fd = open(argv[1], O_RDONLY);
 	if (input_fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	open_flags = O_CREAT | O_WRONLY | O_TRUNC;
 	out_fd = open(argv[2], open_flags, 0664);
