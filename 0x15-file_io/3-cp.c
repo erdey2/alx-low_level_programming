@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	input_fd = open(argv[1], O_RDONLY);
 	if (input_fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	}
 	open_flags = O_CREAT | O_WRONLY | O_TRUNC;
 	out_fd = open(argv[2], open_flags, 0664);
@@ -53,5 +53,4 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", out_fd), exit(100);
 	}
 	return (0);
-
 }
