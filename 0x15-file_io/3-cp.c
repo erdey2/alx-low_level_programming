@@ -19,9 +19,7 @@ int main(int argc, char *argv[])
 	char buf[BUFSIZE];
 
 	if (argc != 3)
-	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	}
 	input_fd = open(argv[1], O_RDONLY);
 	if (input_fd == -1)
 	{
