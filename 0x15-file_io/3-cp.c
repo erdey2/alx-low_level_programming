@@ -38,13 +38,13 @@ int main(int argc, char *argv[])
 	{
 		if (write(out_fd, buf, num_read) != num_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2], exit(99));
 		}
 	}
 	if (num_read < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(input_fd) == -1)
 	{
