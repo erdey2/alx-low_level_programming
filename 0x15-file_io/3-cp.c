@@ -38,7 +38,8 @@ int main(int argc, char *argv[])
 	{
 		if (write(out_fd, buf, num_read) != num_read)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
 		}
 	}
 	if (num_read < 0)
@@ -53,5 +54,5 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", out_fd), exit(100);
 	}
-	return (out_fd);
+	return (0);
 }
