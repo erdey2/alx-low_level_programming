@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_endianness - check whether your system is big / littile endian 
+ * get_endianness - check whether your system is big / littile endian
  *
  * @void: nathing
  *
@@ -9,11 +9,10 @@
 int get_endianness(void)
 {
 	int num = 1;
-	
+
 	if (*(char *)&num == 1)
 		return (1);
 	else
 		return (0);
-	return(0);
-
+	return (0);
 }
