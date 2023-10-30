@@ -48,5 +48,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd2 %d\n", fd2);
 		exit(100);
 	}
-	exit(0);
+	free(buf);
+	close(fd1);
+	close(fd2);
+	return (0);
 }
