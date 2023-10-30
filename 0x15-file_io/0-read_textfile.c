@@ -8,11 +8,11 @@
  * Return: the number of letters read on success -1 on error
  */
 
-ssize_t read_textfile(const *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd1;
-	char buf[letters];
-	size_t nread;
+	char buf[1024];
+	ssize_t nread;
 
 	if (filename == NULL)
 		return (0);
