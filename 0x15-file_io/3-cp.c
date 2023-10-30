@@ -10,9 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	int fd1, fd2;
+	int fd1, fd2, nread, nwrite;
 	char *buf;
-	int nread, nwrite;
 
 	if (argc != 3)
 	{
@@ -24,8 +23,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	fd1 = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	nread = read(fd1, buf, 1024);
-	nwrite = write(fd2, buf, nread);
+	while ((nread = read(fd1, buf, 1024)) == 1024)
+		nwrite = write(fd2, buf, nread);
 	if (fd1 == -1 || nread == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
