@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 	buf = malloc(sizeof(char) * 1024);
@@ -49,7 +49,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	free(buf);
-	close(fd1);
-	close(fd2);
 	return (0);
 }
