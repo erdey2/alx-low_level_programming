@@ -6,13 +6,13 @@
  * @idx: the index of the node to be inserted
  * @n: the node's data part
  *
- * Return: the address of the inserted node on success NULL on error 
+ * Return: the address of the inserted node on success NULL on error
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp, *p;
 	size_t nodeindex = 0;
-	
+
 	p = *h;
 	while (p != NULL)
 	{
