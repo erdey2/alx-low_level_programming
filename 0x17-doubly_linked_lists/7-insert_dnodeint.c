@@ -12,9 +12,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp, *p;
 	size_t nodeindex = 0;
-	
+
 	p = *h;
-	while (p != NULL && nodeindex < idx) 
+	while (p != NULL && nodeindex < idx)
 	{
 		nodeindex++;
 		p = p->next;
