@@ -2,9 +2,9 @@
 
 /**
  * hash_djb2 - a hash function
- * @str - the input string 
+ * @str: the input string
  *
- * Return - an index into the table
+ * Return: an index into the table
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
